@@ -97,6 +97,13 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+
+    // If the category is successfully deleted, return a message
+    if (categoryData) {
+      res.status(200).json({ message: 'Tag deleted!' });
+      return;
+    }
+
     // If no category is found, return a 404 error
     if (!categoryData) {
       res.status(404).json({ message: 'No category found with that id!' });

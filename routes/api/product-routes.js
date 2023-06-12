@@ -126,6 +126,12 @@ router.delete('/:id', async (req, res) => {
       },
     });
 
+    // If product is successfully deleted, return a message
+    if (productData) {
+      res.status(200).json({ message: 'Product deleted!' });
+      return;
+    }
+
     // If no product is found, return a 404 error
     if (!productData) {
       res.status(404).json({ message: 'No product found with that id!' });
