@@ -98,7 +98,9 @@ router.put('/:id', (req, res) => {
 
           // figure out which ones to remove
           const productTagsToRemove = productTags
+          // filters out tags that are not in the req.body.tagIds array
             .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+            // returns an array of objects with the id of the tag to remove
             .map(({ id }) => id);
           // run both actions
           return Promise.all([
