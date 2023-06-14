@@ -3,7 +3,7 @@
 ## Description
 This challenge 13 objective is to build the back end for an e-commerce site using a working Express.js API and configure it to use Sequelize to interact with a MySQL database.
 
-E-commerce Back End walkthrough video: 
+E-commerce Back End walkthrough video: https://drive.google.com/file/d/1okgv2ISHH641V_uQCiSzE1yvaqwsRBAe/view
 
 ## Installation
 N/A
